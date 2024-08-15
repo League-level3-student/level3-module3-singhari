@@ -34,7 +34,18 @@ public class _01_StringMethods {
 
     // Given Strings s1 and s2, return the longer String
     public static String longerString(String s1, String s2) {
-        return null;
+    	
+    	char[] s1Chars = s1.toCharArray();
+    	char[] s2Chars = s2.toCharArray();
+    	if(s1Chars.length > s2Chars.length) {
+            return s1;
+    	}
+    	else if(s1Chars.length < s2Chars.length) {
+    		return s2;
+    	}
+    	else {
+    		return "Both are equal in length.";
+    	}
     }
 
     // If String s contains the word "underscores", change all of the spaces

@@ -44,14 +44,14 @@ public class _01_StringMethods {
     		return s2;
     	}
     	else {
-    		return "Both are equal in length.";
+    		return "equal";
     	}
     }
 
     // If String s contains the word "underscores", change all of the spaces
     // to underscores
     public static String formatSpaces(String s) {
-        return null;
+        return s.replace('_', ' ');
     }
 
     // Return the name of the person whose LAST name would appear first if they
@@ -59,12 +59,29 @@ public class _01_StringMethods {
     // You cannot assume there are no extra spaces around the name, but you can
     // assume there is only one space between the first and last name
     public static String lineLeader(String s1, String s2, String s3) {
+    	String p1 = s1.trim();
+    	String p2 = s2.trim();
+    	String p3 = s3.trim();
+    	char lastLetter1 = p1.charAt(p1.length()-1);
+    	char lastLetter2 = p2.charAt(p2.length()-1);
+    	char lastLetter3 = p3.charAt(p3.length()-1);
+    	
+    
+    	
         return null;
     }
 
     // Return the sum of all numerical digits in the String
     public static int numeralSum(String s) {
-        return 0;
+    	int sum =0; 
+    	char[] Chars = s.toCharArray();
+    	for(int i = 0; i < Chars.length; i++) {
+    		if(Character.isDigit(Chars[i])) {
+    			sum+=Integer.parseInt(Chars[i]+"");
+    		}
+    	}
+
+        return sum;
     }
 
     // Return the number of times String substring appears in String s
@@ -86,7 +103,8 @@ public class _01_StringMethods {
     // Return the number of words in String s that end with String substring
     // You can assume there are no punctuation marks between words
     public static int wordsEndsWithSubstring(String s, String substring) {
-        return 0;
+    	int numberOfWords =0;
+        return numberOfWords;
     }
 
     // Given String s, return the number of characters between the first

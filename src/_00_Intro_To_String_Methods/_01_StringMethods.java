@@ -59,6 +59,7 @@ public class _01_StringMethods {
     // You cannot assume there are no extra spaces around the name, but you can
     // assume there is only one space between the first and last name
     public static String lineLeader(String s1, String s2, String s3) {
+    
     	String p1 = s1.trim();
     	String p2 = s2.trim();
     	String p3 = s3.trim();
@@ -66,9 +67,20 @@ public class _01_StringMethods {
     	char lastLetter2 = p2.charAt(p2.length()-1);
     	char lastLetter3 = p3.charAt(p3.length()-1);
     	int p1num = (lastLetter1);
-    
+    	int p2num = (lastLetter2);
+    	int p3num = (lastLetter3);
+    	String least = p2;
+    	if(p1num < p2num && p2num < p3num) {
+    		least = p1;
+    	}
+    	else if(p3num < p1num && p1num < p2num) {
+    		least = p3;
+    	}
+    	else {
+    		least = p2;
+    	}
     	
-        return null;
+        return least;
     }
 
     // Return the sum of all numerical digits in the String

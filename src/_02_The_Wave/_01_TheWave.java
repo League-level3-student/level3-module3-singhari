@@ -21,14 +21,19 @@ public class _01_TheWave {
     
     public static ArrayList<String> wave(String str) {
     	ArrayList<String> wae = new ArrayList<String>(str.length());
+    	char let = ' ';
+    	String fullword= "";
+    	char[] fullwordc = new char[str.length()];
     	char[] c = str.toCharArray();
     	for(int i = 0; i < wae.size(); i++) {
     		for(int k =0; k < str.length(); k++) {
     			if(k == i) {
-    				c[i] = Character.toUpperCase(c[i]);
+    				 c[i] = Character.toUpperCase(c[i]);
     			}
-    			wae.add(i, c.toString());
+    			fullwordc[k] = c[k];
     		}
+    		fullword = fullwordc.toString();
+    		wae.add(i, fullword);
     	}
     	
         return wae;

@@ -65,7 +65,7 @@ public class _01_StringMethods {
     	char lastLetter1 = p1.charAt(p1.length()-1);
     	char lastLetter2 = p2.charAt(p2.length()-1);
     	char lastLetter3 = p3.charAt(p3.length()-1);
-    	
+    	int p1num = (lastLetter1);
     
     	
         return null;
